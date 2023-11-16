@@ -15,7 +15,7 @@ const Add = ({ employees, setEmployees, setIsAdding }) => {
       return Swal.fire({
         icon: 'error',
         title: 'Error!',
-        text: 'All fields are required.',
+        text: 'Todos los campos son requeridos.',
         showConfirmButton: true,
       });
     }
@@ -37,8 +37,8 @@ const Add = ({ employees, setEmployees, setIsAdding }) => {
 
     Swal.fire({
       icon: 'success',
-      title: 'Added!',
-      text: `${firstName} ${lastName}'s data has been Added.`,
+      title: 'Agregado!',
+      text: `La información de ${firstName} ${lastName} ha sido agregada.`,
       showConfirmButton: false,
       timer: 1500,
     });
@@ -47,8 +47,8 @@ const Add = ({ employees, setEmployees, setIsAdding }) => {
   return (
     <div className="small-container">
       <form onSubmit={handleAdd}>
-        <h1>Add Employee</h1>
-        <label htmlFor="firstName">First Name</label>
+        <h1>Añadir empleado</h1>
+        <label htmlFor="firstName">Nombre</label>
         <input
           id="firstName"
           type="text"
@@ -56,7 +56,7 @@ const Add = ({ employees, setEmployees, setIsAdding }) => {
           value={firstName}
           onChange={e => setFirstName(e.target.value)}
         />
-        <label htmlFor="lastName">Last Name</label>
+        <label htmlFor="lastName">Apellido</label>
         <input
           id="lastName"
           type="text"
@@ -72,7 +72,7 @@ const Add = ({ employees, setEmployees, setIsAdding }) => {
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
-        <label htmlFor="salary">Salary ($)</label>
+        <label htmlFor="salary">Salario ($)</label>
         <input
           id="salary"
           type="number"
@@ -80,7 +80,7 @@ const Add = ({ employees, setEmployees, setIsAdding }) => {
           value={salary}
           onChange={e => setSalary(e.target.value)}
         />
-        <label htmlFor="date">Date</label>
+        <label htmlFor="date">Fecha</label>
         <input
           id="date"
           type="date"
@@ -89,12 +89,12 @@ const Add = ({ employees, setEmployees, setIsAdding }) => {
           onChange={e => setDate(e.target.value)}
         />
         <div style={{ marginTop: '30px' }}>
-          <input type="submit" value="Add" />
+          <input type="submit" value="Añadir" />
           <input
             style={{ marginLeft: '12px' }}
             className="muted-button"
             type="button"
-            value="Cancel"
+            value="Cancelar"
             onClick={() => setIsAdding(false)}
           />
         </div>

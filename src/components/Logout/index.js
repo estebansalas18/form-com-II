@@ -5,8 +5,8 @@ const Logout = ({ setIsAuthenticated }) => {
   const handleLogout = () => {
     Swal.fire({
       icon: 'question',
-      title: 'Logging Out',
-      text: 'Are you sure you want to log out?',
+      title: 'Cerrar Sesión',
+      text: 'Esta seguro de que quieres cerrar sesión?',
       showCancelButton: true,
       confirmButtonText: 'Yes',
     }).then(result => {
@@ -32,7 +32,7 @@ const Logout = ({ setIsAuthenticated }) => {
       className="muted-button"
       onClick={handleLogout}
     >
-      Logout
+      Cerrar Sesión
     </button>
   );
 };

@@ -3,10 +3,10 @@ import Swal from 'sweetalert2';
 
 const Login = ({ setIsAuthenticated }) => {
   const adminEmail = 'admin@example.com';
-  const adminPassword = 'qwerty';
+  const adminPassword = 'admin';
 
   const [email, setEmail] = useState('admin@example.com');
-  const [password, setPassword] = useState('qwerty');
+  const [password, setPassword] = useState('admin');
 
   const handleLogin = e => {
     e.preventDefault();
@@ -24,7 +24,7 @@ const Login = ({ setIsAuthenticated }) => {
 
           Swal.fire({
             icon: 'success',
-            title: 'Successfully logged in!',
+            title: 'Ha iniciado sesión!',
             showConfirmButton: false,
             timer: 1500,
           });
@@ -41,7 +41,7 @@ const Login = ({ setIsAuthenticated }) => {
           Swal.fire({
             icon: 'error',
             title: 'Error!',
-            text: 'Incorrect email or password.',
+            text: 'Email o Contraseña incorrecta.',
             showConfirmButton: true,
           });
         },
@@ -52,7 +52,7 @@ const Login = ({ setIsAuthenticated }) => {
   return (
     <div className="small-container">
       <form onSubmit={handleLogin}>
-        <h1>Admin Login</h1>
+        <h1>Inicio de Sesión</h1>
         <label htmlFor="email">Email</label>
         <input
           id="email"
@@ -62,16 +62,16 @@ const Login = ({ setIsAuthenticated }) => {
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Contraseña</label>
         <input
           id="password"
           type="password"
           name="password"
-          placeholder="qwerty"
+          placeholder="admin"
           value={password}
           onChange={e => setPassword(e.target.value)}
         />
-        <input style={{ marginTop: '12px' }} type="submit" value="Login" />
+        <input style={{ marginTop: '12px' }} type="submit" value="Iniciar Sesión" />
       </form>
     </div>
   );

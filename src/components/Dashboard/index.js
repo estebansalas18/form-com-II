@@ -29,19 +29,19 @@ const Dashboard = ({ setIsAuthenticated }) => {
   const handleDelete = id => {
     Swal.fire({
       icon: 'warning',
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: 'Está seguro?',
+      text: "No podrás revertir esto!",
       showCancelButton: true,
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'No, cancel!',
+      confirmButtonText: 'Si, eliminar!',
+      cancelButtonText: 'No, cancelar!',
     }).then(result => {
       if (result.value) {
         const [employee] = employees.filter(employee => employee.id === id);
 
         Swal.fire({
           icon: 'success',
-          title: 'Deleted!',
-          text: `${employee.firstName} ${employee.lastName}'s data has been deleted.`,
+          title: 'Eliminado!',
+          text: `La información de ${employee.firstName} ${employee.lastName} ha sido eliminada.`,
           showConfirmButton: false,
           timer: 1500,
         });
